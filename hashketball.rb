@@ -189,8 +189,8 @@ end
 def most_points_scored
   game = game_hash
   all_players = game[:home][:players].concat(game[:away][:players])
-  biggest_shoe = all_players.max_by do |player_info|
-    player_info[:shoe]
+  most_points = all_players.max_by do |player_info|
+    player_info[:points]
   end
-  biggest_shoe[:rebounds]
+  biggest_shoe[:player_name]
 end
