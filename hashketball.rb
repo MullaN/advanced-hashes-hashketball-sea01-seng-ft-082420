@@ -204,4 +204,8 @@ def winning_team
   final_score.max_by{|team, score| score}[0]
 end
 
+def long_name_steals_a_ton?
+  game = game_hash
+end
+
 binding.pry
