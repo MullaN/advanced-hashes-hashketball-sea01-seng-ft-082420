@@ -183,5 +183,5 @@ def big_shoe_rebounds
   rebounds = 0
   all_players = game[:home][:players]
   all_players << game[:away][:players]
-  binding.py
+  binding.pry
 end
