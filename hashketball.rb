@@ -145,10 +145,7 @@ def team_colors(team)
 end
 
 def team_names
-  game = game_hash
-  game.collect do |home_away, team_info|
-    team_info[:team_name]
-  end
+  game_hash.collect {|home_away, team_info| team_info[:team_name]}
 end
 
 def player_numbers(team)
