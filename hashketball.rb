@@ -192,7 +192,7 @@ def most_points_scored
   most_points = all_players.max_by do |player_info|
     player_info[:points]
   end
-  biggest_shoe[:player_name]
+  most_points[:player_name]
 end
 
 binding.pry
