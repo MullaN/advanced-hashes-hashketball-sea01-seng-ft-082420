@@ -195,4 +195,8 @@ def most_points_scored
   most_points[:player_name]
 end
 
+def winning_team
+  game = game_hash
+end
+
 binding.pry
