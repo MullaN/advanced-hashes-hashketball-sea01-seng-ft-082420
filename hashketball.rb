@@ -181,7 +181,6 @@ def big_shoe_rebounds
   game = game_hash
   biggest_shoe = 0
   rebounds = 0
-  game.each do |home_away, team_info|
-    
-  end
+  all_players = game[:home][:players].merge(game[:away][:players])
+  binding.py
 end
