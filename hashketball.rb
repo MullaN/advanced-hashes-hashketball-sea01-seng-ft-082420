@@ -197,6 +197,8 @@ end
 
 def winning_team
   game = game_hash
+  final_score = [[],[]]
+  game.each
 end
 
 binding.pry
