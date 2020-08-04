@@ -209,6 +209,7 @@ def long_name_steals_a_ton?
   all_players = game[:home][:players].concat(game[:away][:players])
   test1 = all_players.max_by {|player| player[:steals]}
   test2 = all_players.max_by {|player| player[:player_name].length}
+  binding.pry
 end
 
 binding.pry
