@@ -142,7 +142,7 @@ end
 
 def team_colors(team)
   game = game_hash
-  team_colors = game.find {|home_away, team_info| team_info[:team_name] == team}
+  team_colors = game.find {|home_away, team_info| team_info[:team_name] == team}[1][:colors]
   binding.pry
   team_colors = []
   game.each do |home_away, team_info|
