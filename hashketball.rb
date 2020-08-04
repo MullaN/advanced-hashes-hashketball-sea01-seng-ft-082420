@@ -197,9 +197,11 @@ end
 
 def winning_team
   game = game_hash
-  final_score = [[],[]]
+  final_score = {}
   game.each do |home_away, team_info|
-    final_score[0][0] ? final_score[1][0] = team_info[:team_name] : final_score[0][0] = team_info[:team_name]
+    final_score[team_info[:team_name]] = team_info[:players].sum {|player| player[:score]}
+    binding.pry
+  end
 end
 
 binding.pry
