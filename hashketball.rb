@@ -181,7 +181,6 @@ def big_shoe_rebounds
   game = game_hash
   biggest_shoe = 0
   rebounds = 0
-  all_players = game[:home][:players]
-  all_players << game[:away][:players]
+  all_players = game[:home][:players] << game[:away][:players]
   binding.pry
 end
