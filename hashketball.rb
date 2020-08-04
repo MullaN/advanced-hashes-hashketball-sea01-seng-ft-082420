@@ -201,6 +201,7 @@ def winning_team
   game.each do |home_away, team_info|
     final_score[team_info[:team_name]] = team_info[:players].sum {|player| player[:points]}
   end
+  final_score.max
 end
 
 binding.pry
