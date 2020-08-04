@@ -183,5 +183,5 @@ def big_shoe_rebounds
   biggest_shoe = all_players.max_by do |player_info|
     player_info[:shoe]
   end
-  binding.pry
+  biggest_shoe[:rebounds]
 end
