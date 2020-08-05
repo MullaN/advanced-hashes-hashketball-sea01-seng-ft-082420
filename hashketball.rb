@@ -131,12 +131,11 @@ end
 # Write code here
 
 def num_points_scored(name)
-  player = player_stats(name)
-  player[:points]
+  player_stats(name)[:points]
 end
 
 def shoe_size(name)
-  player_stats[:shoe]
+  player_stats(name)[:shoe]
 end
 
 def team_colors(team)
