@@ -182,8 +182,7 @@ def long_name_steals_a_ton?
 end
 
 def all_players
-  game = game_hash
-  game[:home][:players].concat(game[:away][:players])
+  game_hash[:home][:players].concat(game_hash[:away][:players])
 end
 
 binding.pry
