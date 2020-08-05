@@ -156,20 +156,14 @@ def player_numbers(team)
 end
 
 def player_stats(name)
-  game = game_hash
-  all_players = game[:home][:players].concat(game[:away][:players])
   all_players.find {|player| player[:player_name] == name}
 end
 
 def big_shoe_rebounds
-  game = game_hash
-  all_players = game[:home][:players].concat(game[:away][:players])
   all_players.max_by {|player_info| player_info[:shoe]}[:rebounds]
 end
 
 def most_points_scored
-  game = game_hash
-  all_players = game[:home][:players].concat(game[:away][:players])
   most_points = all_players.max_by do |player_info|
     player_info[:points]
   end
@@ -184,9 +178,12 @@ def winning_team
 end
 
 def long_name_steals_a_ton?
-  game = game_hash
-  all_players = game[:home][:players].concat(game[:away][:players])
   all_players.max_by {|player| player[:steals]} == all_players.max_by {|player| player[:player_name].length}
+end
+
+def all_players
+  game = game_hash
+  game[:home][:players].concat(game[:away][:players])
 end
 
 binding.pry
