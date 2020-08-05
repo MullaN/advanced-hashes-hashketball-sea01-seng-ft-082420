@@ -157,7 +157,7 @@ end
 
 def player_stats(name)
   all_players = game[:home][:players].concat(game[:away][:players])
-  all_players.find {|player| player[:player_name]}
+  all_players.find {|player| player[:player_name] == name}
 end
 
 def big_shoe_rebounds
