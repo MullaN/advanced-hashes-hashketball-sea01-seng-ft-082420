@@ -157,6 +157,7 @@ end
 
 def player_stats(name)
   all_players = game[:home][:players].concat(game[:away][:players])
+  binding.pry
   all_players.find {|player| player[:player_name] == name}
 end
 
