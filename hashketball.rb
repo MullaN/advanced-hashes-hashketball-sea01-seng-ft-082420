@@ -133,12 +133,10 @@ end
 def num_points_scored(name)
   player = player_stats(name)
   player[:points]
-  #player ? player[:points] : nil
 end
 
 def shoe_size(name)
-  player = player_stats(name)
-  player ? player[:shoe] : nil
+  player_stats[:shoe]
 end
 
 def team_colors(team)
