@@ -171,8 +171,6 @@ def big_shoe_rebounds
   game = game_hash
   all_players = game[:home][:players].concat(game[:away][:players])
   all_players.max_by {|player_info| player_info[:shoe]}[:rebounds]
-  end
-  biggest_shoe[:rebounds]
 end
 
 def most_points_scored
