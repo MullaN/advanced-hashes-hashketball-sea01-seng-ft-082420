@@ -160,8 +160,8 @@ def player_stats(name)
     player_hash = team_info[:players].find do |player|
       player[:player_name] == name
     end
-    binding.pry
     return player_hash if player_hash
+    binding.pry
   end
 end
 
