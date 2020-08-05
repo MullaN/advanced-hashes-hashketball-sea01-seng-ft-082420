@@ -164,10 +164,7 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-  most_points = all_players.max_by do |player_info|
-    player_info[:points]
-  end
-  most_points[:player_name]
+  all_players.max_by {|player_info| player_info[:points]}[:player_name]
 end
 
 def winning_team
