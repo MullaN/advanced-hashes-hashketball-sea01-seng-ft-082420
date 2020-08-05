@@ -156,13 +156,8 @@ def player_numbers(team)
 end
 
 def player_stats(name)
-  game_hash.each do |home_away, team_info|
-    player_hash = team_info[:players].find do |player|
-      player[:player_name] == name
-    end
-    return player_hash if player_hash
-    binding.pry
-  end
+  all_players = game[:home][:players].concat(game[:away][:players])
+  all_players.find {|player| player[:player_name]}
 end
 
 def big_shoe_rebounds
