@@ -186,7 +186,6 @@ def winning_team
   final_score = game_hash.collect do |home_away, team_info|
     [team_info[:team_name], team_info[:players].sum {|player| player[:points]}]
   end
-  binding.pry
   final_score.max_by{|team, score| score}[0]
 end
 
