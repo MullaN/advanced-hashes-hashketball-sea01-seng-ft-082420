@@ -183,9 +183,8 @@ def most_points_scored
 end
 
 def winning_team
-  final_score = {}
-  game_hash.each do |home_away, team_info|
-    final_score[team_info[:team_name]] = team_info[:players].sum {|player| player[:points]}
+  final_score = game_hash.collect do |home_away, team_info|
+    [team_info[:team_name], team_info[:players].sum {|player| player[:points]}]
   end
   final_score.max_by{|team, score| score}[0]
 end
