@@ -184,5 +184,3 @@ end
 def all_players
   game_hash[:home][:players].concat(game_hash[:away][:players])
 end
-
-binding.pry
