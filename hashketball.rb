@@ -158,10 +158,9 @@ def player_numbers(team)
 end
 
 def player_stats(name)
-  game = game_hash
   player_hash = nil
-  game.each do |home_away, team|
-    player_hash = game[home_away][:players].find do |player|
+  game_hash.each do |home_away, team_info|
+    player_hash = team_info[:players].find do |player|
       player[:player_name] == name
     end
     return player_hash if player_hash
@@ -187,9 +186,8 @@ def most_points_scored
 end
 
 def winning_team
-  game = game_hash
   final_score = {}
-  game.each do |home_away, team_info|
+  game_hash.each do |home_away, team_info|
     final_score[team_info[:team_name]] = team_info[:players].sum {|player| player[:points]}
   end
   final_score.max_by{|team, score| score}[0]
